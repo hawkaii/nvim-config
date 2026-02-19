@@ -2,14 +2,14 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- Ensure background stays transparent across colorscheme changes
-local function set_transparent()
-  for _, group in ipairs({ "Normal", "NormalNC", "NormalFloat", "FloatBorder", "SignColumn", "EndOfBuffer" }) do
-    vim.api.nvim_set_hl(0, group, { bg = "none" })
-  end
-end
-
-set_transparent()
-vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = set_transparent,
-})
+-- -- Ensure background stays transparent across colorscheme changes
+-- local function set_transparent()
+--   for _, group in ipairs({ "Normal", "NormalNC", "NormalFloat", "FloatBorder", "SignColumn", "EndOfBuffer" }) do
+--     vim.api.nvim_set_hl(0, group, { bg = "none" })
+--   end
+-- end
+--
+-- set_transparent()
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   callback = set_transparent,
+-- })

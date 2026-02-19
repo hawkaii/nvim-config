@@ -7,6 +7,8 @@ return {
   -- Add Oil as the default file explorer with extras
   {
     "stevearc/oil.nvim",
+    priority = 1001, -- load before snacks.nvim (priority 1000) to win the netrw-hijack race
+    lazy = false,
     opts = {
       default_file_explorer = true,
       delete_to_trash = true,
@@ -28,5 +30,5 @@ return {
   },
 
   { "akinsho/bufferline.nvim", enabled = false },
-  { "folke/snacks.nvim", opts = { explorer = { enabled = false } } },
+  { "folke/snacks.nvim", opts = { explorer = { enabled = false, replace_netrw = false } } },
 }
