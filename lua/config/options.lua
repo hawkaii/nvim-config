@@ -9,3 +9,4 @@ vim.opt.breakindent = true
 
 vim.opt.colorcolumn = "80"
 vim.opt.showtabline = 0
+vim.opt.wrap = true
